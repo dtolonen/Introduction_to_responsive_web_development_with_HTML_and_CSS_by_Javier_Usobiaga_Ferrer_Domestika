@@ -1,0 +1,655 @@
+/* Reset CSS code from Meyerweb */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+
+SUGGESTIONS FOR THE PROJECT
+
+· Load Open Sans fonts from Google Fonts
+- Control the heights of the boxes with min-height
+· background-size: cover; Can you help with those backgrounds?
+
+
+
+Especificaciones
+
+
+COLORES
+
+Rojo: #d03b40
+Beige: #ded6c0
+Blanco: #f5f0ed
+Gris: #241d1b
+
+Texto claro: #f5f0ed
+Texto oscuro: #3c3c3b
+
+
+TIPOGRAFÍAS
+
+Open Sans Regular
+Open Sans Extrabold
+
+
+TAMAÑOS
+
+Encabezado 1r nivel: 44px
+Encabezado 2º nivel: 28px
+Encabezado 3r nivel: 24px
+Cuerpo de texto: 16px
+Botones: 14px
+
+*/
+
+
+/* CSS from a clean slate */
+
+* {
+	box-sizing: border-box;
+
+}
+
+
+
+@font-face {
+	font-family: "Open Sans" , "Sans Serif";
+	src: url(font/OpenSans-Regular.ttf) format("ttf");
+	src: url(font/OpenSans-Bold.ttf) format("ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+font-family: 'OpenSans-Regular' , 'Open Sans', 'Sans Serif';
+font-weight: normal;
+font-style: normal;
+
+
+}
+
+/* Nav section */
+
+.nav_container{
+	position: fixed;/*this keeps the navbar fixed*/
+	width: 100%;/*without this, the right-side kept moving for some reason*/
+	background-color: #d03b40;
+
+	height: 120px;
+
+}
+
+.navigation{
+	padding:0;
+	display: inline;
+	margin:0;
+	/* text-decoration: none; */
+	/* list-style:none; */
+	height:80;
+	background-color: #d03b40; 
+	/* padding: 15px; */
+}
+
+.navigation ul{
+	background-color: #d03b40;
+	display: block;
+	float: right;
+	margin-top: 20px;
+	padding-left:25px;
+
+	margin-right: 30px;
+	padding-top:30px;
+	
+	padding-bottom: 10px; /*this was causing a white line under the logo*/
+	
+}
+/*works, but should this be .navigation ul li?*/
+.navigation li{
+	/* padding-top:20px; */
+	margin-left: 5px;
+
+	/*from blue nav tutorial*/
+	/* display: inline-block;
+	line-height: 80px;
+	margin: 0 5px; */
+
+} 
+/*works, but should this be .navigation ul li a?*/
+
+.navigation a{
+
+	color:#f5f0ed;
+	text-decoration: none;
+
+	/*from blue nav tutorial*/
+	/* color: white; 
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;  */
+}
+
+/*from blue nav tutorial*/
+a.active, a:hover{
+	background: lightcoral;
+	transition: .5s;
+}
+
+
+/*from blue nav tutorial*/
+.checkbtn{
+	padding-top: 12px;
+	font-size:30px;
+	color:white;
+	float:right;
+	line-height: 80px;
+	margin-right:40px;
+	cursor:pointer;
+	display:none;
+}
+
+/*from blue nav tutorial*/
+#check{
+	display:none;
+}
+
+
+.navigation img{
+	width:200px;
+	display: inline-block;
+	/* float: left; */
+	/* position: fixed; */
+	padding-top:18px;
+	padding-left: 20px;;
+	padding-bottom: 10px;
+	/* background-color: #d03b40; */
+	
+}
+
+.menu{
+	display: inline;
+	float: right; 
+	/* align:right; */
+	/* background-color: #d03b40; */
+}
+
+.menu-list{
+	/* background-color: #d03b40; */
+}
+
+.menu li{
+	display: inline-block;
+	background-color: #d03b40;
+}
+
+
+/* Header with oven tray image */
+
+.header { 
+	background-image: url("images/Fondo1.jpg");
+	background-attachment: fixed;  /* This would keep image sticky*/
+	min-height: 100vh;
+	width:100%;
+	background-size: cover;
+	background-position: center;
+	display: flex; 
+	padding: 80px 15px;
+	justify-content: center;
+	background-blend-mode: soft-light;
+}
+
+h1{
+	font-family: 'Open Sans' , sans-serif;
+	font-weight: 900;
+	font-size: 44px;
+	text-align: center;
+	color: #f5f0ed;
+}
+
+.h1_red_container{
+	font-family: 'Open Sans' , sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+	color: #ded6c0;
+}
+
+
+
+.h1_beige_container{
+	font-family: 'Open Sans' , sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+	color: #d03b40
+}
+
+.h2_beige_container{
+	color: #d03b40;
+	font-size: 13;
+	font-weight: 300;
+	max-width: 500px;
+
+}
+
+.h2_red_container{
+	color: #ded6c0;
+	font-size: 13;
+	font-weight: 300;
+	max-width: 500px;
+
+}
+
+h2{
+	font-family: 'Open Sans' , sans-serif;
+	font-weight: 300;
+	font-size: 13x;
+	max-width: 400px;
+	text-align: center;
+	color: #f5f0ed;
+	padding-top: 15px;
+	line-height: 1.4;
+	
+}
+
+
+
+
+.text_container-header{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	max-width: 500px;
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	color: #f5f0ed;
+	
+}
+
+hr{
+	border: 1px solid #f5f0ed; width: 20%;margin: 20px auto;
+}
+
+
+
+/* Brunch and parties section */
+
+#brunch_parties{
+	display: block;
+}
+
+.brunch_parties-item{
+	min-height: 50vh;
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	
+} 
+
+
+
+.text_container{
+	text-align: center;
+	width: 90%;
+	max-width: 500px;
+	margin: auto;
+	
+}
+
+.red_container{
+	width: 50%;
+	float: left;
+	background-color: #d03b40; color: #f5f0ed; 
+}
+
+.beige_container{
+	width: 50%;
+	float: left;
+
+	background-color: #ded6c0; color: #d03b40; 
+}
+
+
+
+
+
+
+/* Breakfast section */
+
+#breakfast{
+	/* display:block; */
+	/* 	nb this is why I couldn't create top padding! */
+
+}
+
+.breakfast{
+	background-image: url("images/Fondo2.jpg");
+	/*do the next two work?*/
+	background-color: rgba(0,0,0,0.4);
+	background-blend-mode: soft-light;
+	min-height: 50vh;
+
+	background-size: cover;
+	background-position: center;
+
+	display: flex; 
+	padding: 80px 15px;
+} 
+
+
+
+
+.text_container_breakfast{
+
+	background-size: cover; 
+	align-items: center;
+	text-align: center;
+	max-width: 400px;
+	width: 90%;
+	margin: auto;
+	color: #f5f0ed;
+
+}
+
+
+
+#descubre {
+    /* width:max-content; */
+
+    text-align: auto;
+    margin: 20px auto;
+}
+
+.descubre {
+	text-decoration: none;
+    color: #f5f0ed;
+    border: 2px solid #f5f0ed;
+    border-radius: 12px;
+    padding: 15px;
+	max-width:500px;
+    transition: 0.4s;
+	text-align:center;
+    justify-content: center;
+    align-items: center;
+} 
+
+a:visited{
+	color:#ded6c0;
+}
+
+/*button hover pseudo-classes*/
+.descubre:hover{background-color: #d03b40;}
+.descubre:active{background-color: #8b292c;}
+
+
+/* Four icons with text section */
+
+#two_icons{
+	
+}
+
+
+.two_icons{
+	background-color: #f5f0ed;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	display: flex;
+	flex-direction: row;
+}
+
+.single_icon_container{
+	min-height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 90%;
+	margin: auto; 
+	color: #3c3c3b; 
+	text-align: center;
+
+	/* width: 50%;
+	flex-direction: row;
+	gap: 15px; */
+}
+
+.icon_image{
+
+}
+
+.single_icon_text{
+	width: 90%;
+	margin: auto; 
+	/* margin-top: 30px; */
+	margin-left: 15px;	
+	margin-right: 30px;
+	color: #3c3c3b; 
+	text-align: center;
+}
+
+
+.h2_black{
+
+	color:black;
+	font-size: 28px;
+	font-weight: 700;
+	text-align: left;
+	margin: 20px 0;
+
+	/* color:black;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 900;
+	font-size: 28; */
+}
+
+.h3_black{
+
+	color: black;
+	text-align: left;
+	font-size: 18;
+	font-weight: 200;
+	line-height: 25px;
+
+	/* font-family: 'Open Sans', sans-serif;
+	font-size: 16; */
+}
+
+
+
+
+
+
+
+/* #four_icons{
+
+}
+
+.four_icons{ background-color: #f5f0ed;}
+.icon_card{width:50%; float:left; min-height: 50vh;display: flex; justify-content: center;align-items: center;background-color: #f5f0ed;}
+
+.text_container-four-icons{width: 90%;margin: auto; color: #3c3c3b; text-align: center;}
+.text_container-four-icons h1{
+	color: #3c3c3b;
+	font-family: 'Open Sans' , sans-serif;
+	font-weight: 900;
+	font-size: 34px;
+	text-align: center;
+}
+
+.text_container-four-icons h2{
+	color: #3c3c3b;
+}
+
+#four_icons img{
+	float:left;
+	padding-top: 80px;	
+	margin-right: 20px;
+	margin-bottom: 20px;
+} */
+
+
+
+img{width: 100px;}
+/* h3{font-size: 24px;font-weight: bold;text-align: left;margin: 20px 0;}
+p{text-align: left;line-height: 25px;} */
+
+
+
+/* Contact section */
+
+#contact{
+
+}
+
+.clearing {
+	clear: both;
+	}
+	
+.contact{
+	padding-bottom: 50px;
+}
+
+.bold-text{
+	font-weight: bold;
+}
+
+.contact .h2_beige_container a{
+	color:#d03b40;
+}
+
+/* .contact .h2_beige_container a:visited{
+	background: none;
+	color: lightcoral;
+} */
+
+.contact .h2_red_container a{
+	color:#ded6c0;
+}
+
+
+
+/* Footer section */
+
+
+
+.footer{
+	clear: both;
+
+}
+
+
+
+.text_container_footer div{
+
+}
+
+.text_container_footer p{
+	/* text-align: center; */
+	padding-top: 50px;	
+	background-color: #241d1b;
+	color:#ded6c0;
+	padding-left: 30px;
+	min-height: 120px;	
+
+
+
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width:750px){
+    .red_container, .beige_container .breakfast {width:100%}
+
+	.beige_container{float:none; width:100%;}
+	.two_icons{display: block;}
+	.single_icon_container{display:block; padding-bottom: 20px;; }
+
+	.checkbtn{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #2c3e50;
+		top: 80px;
+		left: -120%;
+		text-align: center;
+		transition: all .5s;
+	}
+
+	nav ul li{
+		display:block;
+		width:100%;
+		margin: 30px 0px;
+		line-height: 30px;
+
+	}
+	nav ul li a{
+		font-size:20px;
+
+
+	}
+	a:hover, a.active{
+		background: none;
+		color: lightcoral;
+
+	}
+	#check:checked ~ ul{
+		left:0;
+	}
+
+
+
+
+}
